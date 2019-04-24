@@ -4,4 +4,11 @@ Created by: Andrew Larson
 Date Created: 4/13/19
 Last Updated: 4/13/19
 */
-
+html {
+	width: 100%;
+}
+.hr1 {
+	border: 2px solid #e2a55f; 
+	font-size: 2.5em;
+	width: 90%;
+}
