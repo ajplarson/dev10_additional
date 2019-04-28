@@ -3,7 +3,7 @@
 TO-DO LIST 
 Created by: Andrew Larson
 Date Created: 4/13/19
-Last Updated: 4/13/19
+Last Updated: 4/27/19
 -->
 
 <html lang="en">
@@ -16,60 +16,86 @@ Last Updated: 4/13/19
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 	
-	<!-- custom style sheet -->
-	<link href="styles/todoStyles.css" rel="stylesheet" type="text/css" />
+		<!-- custom style sheet -->
+		<link href="styles/todoStyles.css" rel="stylesheet" type="text/css" />
 	
-	<!-- custom JS sheet -->
-	<script  src="scriptsTodo.js" type="text/JavaScript"></script>
+		<!-- custom JS sheet -->
+		<script  src="scriptsTodo.js" type="text/JavaScript"></script>
 
     <title>Todo List</title>
   </head>
   
   
   
-  <body class="bg-light">
-	<div class="container">
-		<!-- BEGIN: Title Section -->
-		<div class="row justify-content-center">
-			<div class="col-12 col-md-8 col-sm-7 col-lg-9">
-					<h1 class="display-3">Todo List. Gonna type some extra stuff here to test width hehe</h1>
+  <body>
+		<div class="container">
+			<!-- BEGIN: Title Section -->
+			<h1 class="text-center display-1">Todo List</h1>
+			<!-- END: Title Section -->
+
+
+			<!-- BEGIN: User Entry Section 
+				add 75% width container-->
+			<div class="row" style="background-color:lightcoral">
+					<form class="col-8 mx-auto" id="inputForm">
+						<div class="form-group">
+							<label for="todoTask">Task</label>
+							<input class="form-control" id="todoTask" aria-describedby="taskEntry">
+						</div>
+						<div class="form-group"> <!-- Leave off here bootstrap forms -->
+							<label for="daysToComplete">Days To Complete</label>
+							<input class="form-control" id="daysToComplete">
+						</div>
+						<button type="button" class="btn btn-secondary" id="submitButton">Submit</button>
+					</form>
+			</div> 
+			<!-- END: User Entry Section -->
+		
+		
+			<hr class="hr1"/> <!-- TO DO: ADD A CLASS TO THIS AND MAKE IT ~85% screen width -->
+		
+		
+			<!-- BEGIN: Task Output Section
+			add 100% width container -->
+			<div class="row">
+				<ul class="col-12 mx-auto" id="listOutput">
+					<li>
+							<div class="alert alert-warning alert-dismissible fade show" role="alert">
+									<strong>Holy guacamole!</strong> You should check in on some of those fields below.
+									<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+							</div>
+					</li> 
+					<li>
+							<div class="alert alert-warning alert-dismissible fade show" role="alert">
+									<strong>Holy guacamole!</strong> You should check in on some of those fields below.
+									<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+							</div>
+					</li> 
+					<li>
+							<div class="alert alert-warning alert-dismissible fade show" role="alert">
+									<strong>Holy guacamole!</strong> You should check in on some of those fields below.
+									<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+							</div>
+					</li>  
+					<li>
+							<div class="alert alert-warning alert-dismissible fade show" role="alert">
+									<strong>Holy guacamole!</strong> You should check in on some of those fields below.
+									<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+							</div>
+					</li> 
+				</ul>
 			</div>
+			<!-- END: Task Output Section -->
+
 		</div>
-	
-		<!-- END: Title Section -->
-	
-	
-		<!-- BEGIN: User Entry Section 
-			add 75% width container-->
-		<div class="row">
-				<form>
-					<div class="form-group">
-						<label for="todoTask">Task</label>
-						<input type="task" class="form-control" id="todoTask" aria-describedby="taskEntry">
-					</div>
-					<div class="form-group"> <!-- Leave off here bootstrap forms -->
-						<label for="daysToComplete">Days To Complete</label>
-						<input type="daysLeft" class="form-control" id="daysToComplete">
-					</div>
-					<button type="submit" class="btn btn-primary">Submit</button>
-				</form>
-		</div> 
-		<!-- END: User Entry Section -->
-	
-	
-	<hr class="hr1"/> <!-- TO DO: ADD A CLASS TO THIS AND MAKE IT ~85% screen width -->
-	
-	
-		<!-- BEGIN: Task Output Section
-		add 100% width container -->
-		<div class="todo pt-3 pb-3 row">
-			<h1>
-			test. This is a test sentence to see if this actually goes the entire length of the screen.
-			</h1>
-		</div>
-		<!-- END: Task Output Section -->
-	
-	</div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
