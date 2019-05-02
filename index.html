@@ -20,7 +20,7 @@ Last Updated: 4/27/19
 		<link href="styles/todoStyles.css" rel="stylesheet" type="text/css" />
 	
 		<!-- custom JS sheet -->
-		<script  src="scriptsTodo.js" type="text/JavaScript"></script>
+		<script  src="scripts/scriptsTodo.js" type="text/JavaScript"></script>
 
     <title>Todo List</title>
   </head>
@@ -40,11 +40,11 @@ Last Updated: 4/27/19
 					<form class="col-8 mx-auto" id="inputForm">
 						<div class="form-group">
 							<label for="todoTask">Task</label>
-							<input class="form-control" id="todoTask" aria-describedby="taskEntry">
+							<input type="text" class="form-control" id="todoTask" required>
 						</div>
-						<div class="form-group"> <!-- Leave off here bootstrap forms -->
+						<div class="form-group"> 
 							<label for="daysToComplete">Days To Complete</label>
-							<input class="form-control" id="daysToComplete">
+							<input type="number" value="1" min="1" max="10" class="form-control" id="daysToComplete">
 						</div>
 						<button type="button" class="btn btn-secondary" id="submitButton">Submit</button>
 					</form>

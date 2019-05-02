@@ -1,5 +1,5 @@
 window.onload=function() {
-    var idVariable = 1;
+    var counter = 1;
     var inputForm =document.getElementById("inputForm");
     var daysToComplete = document.getElementById("daysToComplete");
     var todoTask = document.getElementById("todoTask");
@@ -7,20 +7,51 @@ window.onload=function() {
     var listOutput = document.getElementById("listOutput");
 
     submitButton.addEventListener("click", submitTask);
-
+    /*
+    //Validates that input is a number for Days to Complete task
+    daysToComplete.addEventListener("input", function (event) {
+        if(daysToComplete.validity.typeMismatch) {
+            daysToComplete.setCustomValidity("Please enter a number");
+        }
+        else {
+            daysToComplete.setCustomValidity("");
+        }
+    });
+    //Validates that Task Entered is not empty 
+    todoTask.addEventListener("input", function (event) {
+        if(todoTask.validity.typeMismatch) {
+            todoTask.setCustomValidity("Please enter a number");
+        }
+        else {
+            todoTask.setCustomValidity("");
+        }
+    }); */
 
     function submitTask() {
         //input validation for task
-        if(todoTask === "") {
-            alert("Please fill out this field.");
+        if(todoTask.value === "") {
+            todoTask.setCustomValidity("Please fill out this field.");
         }
         else {
-            var enteredTask = todoTask.nodeValue;
-            var item = `<li id="li-${id}">${enteredTask}
-            `
+            var enteredTask = todoTask.value;
+            var ele = `<li id="li-${counter}">${enteredTask}</li>
+            `;
+            listOutput.insertAdjacentHTML('beforeend',ele);
+            counter++;
+            inputForm.reset();
         }
 
-    }
+    } 
+
+    /*
+    Element to insert
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+		<strong>Holy guacamole!</strong> You should check in on some of those fields below.
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+		</button>
+    </div>
+    */
 
 
 
