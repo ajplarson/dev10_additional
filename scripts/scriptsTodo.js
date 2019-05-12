@@ -34,8 +34,17 @@ window.onload=function() {
         }
         else {
             var enteredTask = todoTask.value;
-            var ele = `<li id="li-${counter}">${enteredTask}</li>
-            `;
+            var enteredDays = daysToComplete.value;
+            var ele = 
+            `<li id="li-${counter}">
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong>${enteredTask}</strong> 
+                    <br>${enteredDays} day(s)
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </li>`;
             listOutput.insertAdjacentHTML('beforeend',ele);
             counter++;
             inputForm.reset();
@@ -44,6 +53,7 @@ window.onload=function() {
     } 
 
     /*
+    ${enteredTask}
     Element to insert
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
 		<strong>Holy guacamole!</strong> You should check in on some of those fields below.
