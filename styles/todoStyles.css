@@ -23,13 +23,13 @@ h1 {
 
 li {
 	margin-top: 1.5rem;
+	margin-right: 1rem;
 }
 
 ul {
 	margin-top: 1.5rem;
 	list-style: none;
-	/*display: none; */
-
+	display: flex;   
 }
 
 .hr1 {
